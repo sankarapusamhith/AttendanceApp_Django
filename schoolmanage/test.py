@@ -1,0 +1,23 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+chrome_path='/Gaius IRP/mini project/Django/Attendance Reg/schoolmanage/chromedriver.exe'
+driver=webdriver.Chrome(executable_path=chrome_path)
+driver.get("http://127.0.0.1:8000/")
+print(driver.title)
+nam=driver.find_element_by_name("nam")
+nam.clear()
+nam.send_keys("sam")
+nam.send_keys(Keys.RETURN)
+ph=driver.find_element_by_name("ph")
+ph.clear()
+ph.send_keys("7337565764")
+ph.send_keys(Keys.RETURN)
+uni=driver.find_element_by_name("uni")
+uni.clear()
+uni.send_keys("svu")
+uni.send_keys(Keys.RETURN)
+rn=driver.find_element_by_name("rn")
+rn.clear()
+rn.send_keys("11716038")
+rn.send_keys(Keys.RETURN)
+print(driver.current_url)
